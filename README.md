@@ -11,7 +11,6 @@
 ```pip install -r requirements.txt```
 6. Vytvorit databazu v PostgreSQL, napr. s menom _donaska_
 7. Vytvorit premennu prostredia s adresou a menom databazy  
-```setx DATABASE_URL TODOTODO```
-8. Spustit migracie  
-```python manage.py db init```  
-```python manage.py db migrate```
+```setx DATABASE_URL postgresql://DB_USERNAME:DB_PASS@localhost:5432/DB_NAME```
+8. Upgrade databazy podla migracii
+```flask db upgrade```
